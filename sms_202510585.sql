@@ -63,7 +63,7 @@ CREATE TABLE missions (
 -- Does: creates soldiers. Auto-numbered PK, unique service number, all columns required,
 --       status limited to 3 values (default Active), enlistment after birth, FKs to ranks and units.
 CREATE TABLE soldiers (
-  soldier_id      INT         NOT NULL AUTO_INCREMENT,
+  soldier_id      INT         NOT NULL GENERATED ALWAYS AS PRIMARY IDENTITY KEY,
   service_number  VARCHAR(30) NOT NULL,
   first_name      VARCHAR(50) NOT NULL,
   last_name       VARCHAR(50) NOT NULL,
